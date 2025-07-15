@@ -1,0 +1,138 @@
+@charset "UTF-8";
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+img {
+  width: 100%;
+  vertical-align: bottom;
+}
+
+a {
+  text-decoration: none;
+  color: white;
+}
+
+body {  
+  width: 100%;
+  height: 100%;
+  background: url(line-sub.png) repeat-x fixed top #08599c;
+  background-size: 2000px;
+}
+
+.logo {
+  width: 100px;
+  position: absolute;
+  top: 1%;
+  right: 1%;
+}
+/* main */
+.wrap {
+  padding: 30px;
+  margin: 200px auto;
+  width: 600px;
+  height: 400px;
+  background-color: white;
+  border-radius: 50px;
+  font-family: 'M PLUS Rounded 1c', sans-serif;
+}
+
+.score {
+  margin: 30px auto;
+  width: 300px;
+  height: 200px;
+  border-radius: 50px;
+  background: url(giza.png) no-repeat #08599c;
+  background-size: 90%;
+  background-position: center;
+  position: relative;
+}
+
+.IQ-A {
+  padding: 50px 0;
+  text-align: center;
+  font-size: 3.5em;
+  font-weight: bold;
+  color: #c90404;
+}
+
+p {
+  text-align: right;
+  font-size: 2em;
+}
+
+/* プレゼント */
+.pre img {
+  width: 200px;
+}
+
+.pre {
+  transform: skew(0deg);
+  animation: skew-anim 10s forwards;
+  position: absolute;
+  top: -30px;
+  left: 50px;
+}
+
+@keyframes skew-anim {
+  0% {
+    transform: skew(0deg);
+  }
+  100% {
+    transform: skew(90deg);
+    display: none;
+  }
+}
+
+/* ロケット */
+.rocket img {
+  width: 100px;
+}
+
+.rocket {
+  position: absolute;
+  bottom: 0;
+  left: 20%;
+  transform: translateY(-100%);
+  animation: fly-up 15s ease-in forwards;
+}
+
+@keyframes fly-up {
+  0% {
+    transform: translate(-50%, 0);
+  }
+  100% {
+    transform: translateY(-1000%);
+  }
+}
+
+/* りんご */
+.real {
+  position: fixed;
+  right: 5%;
+  bottom: 5%;
+  width: fit-content;
+}
+
+.real img{
+  display: block;
+  margin: 0 auto;
+  width: 100px;
+  opacity: 0;
+}
+
+.real p {
+  display: block;
+  margin: 0 auto;
+  font: 0.5em white;
+  letter-spacing: 0.5em;
+  color: white;
+  text-align: center;
+}
+
+.real a img:hover {
+  transition: 2s ease-in-out;
+  opacity: 1;
+}
