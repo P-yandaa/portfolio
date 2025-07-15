@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="style.css">
+  <title>お問い合わせフォーム</title>
+  <link rel="icon" href="img/favicon.ico">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Dela+Gothic+One&display=swap" rel="stylesheet">
+</head>
+<body>
+  <header>
+    <div class="flex-head">
+      <nav>
+        <ul>
+          <li><a href="#">HOME</a></li>
+          <li><a href="#">ABOUT</a></li>
+          <li><a href="#">NEWS</a></li>
+          <li><a href="#">SPECIAL</a></li>
+          <li><a href="#">ACCESS</a></li>
+        </ul>
+      </nav>
+      <div class="contact"><a href="form.html">お問い合わせ</a></div>
+    </div>
+  </header>
+  <!-- main -->
+  <main>
+    <div class="top">
+      <div><img src="img/memo.png" alt="memo-icon"></div>
+      <h2>お問い合わせフォーム</h2>
+      <div><img src="img/hane.png" alt="hane-icon"></div>
+    </div>
+    <div class="wrap">
+    <dl>
+      <div class="flex">
+        <dt>お名前<span class="must">必須</span></dt>
+        <dd>
+          <label>　姓<input type="text" name="name01" required placeholder="（例）山田 "></label>
+          <label>　名<input type="text" name="name02" required placeholder="（例）太郎 "></label>
+        </dd>
+      </div>
+      <div class="flex">
+        <dt>フリガナ<span class="must">必須</span></dt>
+        <dd>
+          <label>セイ<input type="text" name="name01" required placeholder="（例）ヤマダ "></label>
+          <label>メイ<input type="text" name="name02" required placeholder="（例）タロウ "></label>
+        </dd>
+      </div>
+      <div class="flex">
+      <dt>性別<span class="must">必須</span></dt>
+      <dd>
+        <input type="radio" name="gender" value="男" required >男
+        <input type="radio" name="gender" value="女" required >女
+        <input type="radio" name="gender" value="未回答" required >未回答
+      </dd>
+    </div>
+
+    <div class="flex">
+      <dt>年代</dt>
+      <dd>
+        <select name="age">
+          <option value="0-9">～10代</option>
+          <option value="10-19">10代</option>
+          <option value="20-29">20代</option>
+          <option value="30-39">30代</option>
+          <option value="40-49">40代</option>
+          <option value="50-59">50代</option>
+          <option value="60-69">60代</option>
+          <option value="70-79">70代</option>
+          <option value="80-89">80代</option>
+          <option value="90-99">90代</option>
+          <option value="100-">100代～</option>
+        </select>
+      </dd>
+    </div>
+    <div class="flex">
+      <dt>メールアドレス<span class="must">必須</span></dt>
+      <dd>
+        <input type="email" name=email required>@
+        <input type="email" name=email required placeholder=".co.jp">
+      </dd>
+    </div>
+    <div class="flex">
+      <dt>電話番号</dt>
+      <dd>
+        <input type="tel" name="tel01">－
+        <input type="tel" name="tel02">－
+        <input type="tel" name="tel03">
+      </dd>
+    </div>
+    <div class="flex">
+      <dt>血液型</dt>
+      <dd>
+        <input type="radio" name="comment-menu" value="menu01">新規登録
+        <input type="radio" name="comment-menu" value="menu01">更新の手続き
+        <input type="radio" name="comment-menu" value="menu01">契約内容
+        <input type="radio" name="comment-menu" value="AB">解約
+        <input type="radio" name="comment-menu" value="menu01">その他
+      </dd>
+    </div>
+    <div class="flex">
+      <dt>お問い合わせ内容</dt>
+      <dd>
+        <textarea name="comment"  cols="60" rows="10"></textarea>
+      </dd>
+    </div>
+    </dl>
+    <input type="submit" name="submit" value="送信する">
+  </div>
+  </main>
+</div>
+</body>
+</html>
