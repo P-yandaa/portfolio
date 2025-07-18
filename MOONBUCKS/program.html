@@ -1,0 +1,552 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- css -->
+    <link rel="stylesheet" href="CSS/style.css" />
+    <link rel="stylesheet" href="CSS/modaal.min.css">
+    <!-- font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bungee&family=Noto+Sans+JP:wght@500;800&display=swap" />
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v6.4.0/css/all.css" />
+    <title>上映情報 / MOONBUCKS COFFEE</title>
+    <link rel="icon" href="IMG/favicon.ico">
+  </head>
+  <body>
+    <!-- cursor -->
+    <!-- <div> -->
+      <div id="cursor">
+      </div>
+        <div class="stalker stalker01"><img src="IMG/cursor.png" alt=""></div>
+        <div class="stalker stalker02"><img src="IMG/cursor.png" alt=""></div>
+        <div class="stalker stalker03"><img src="IMG/cursor.png" alt=""></div>
+        <div class="stalker stalker04"><img src="IMG/cursor.png" alt=""></div>
+        <div class="stalker stalker05"><img src="IMG/cursor.png" alt=""></div>
+        <div class="stalker stalker06"><img src="IMG/cursor.png" alt=""></div>
+        <div class="stalker stalker07"><img src="IMG/cursor.png" alt=""></div>
+        <div class="stalker stalker08"><img src="IMG/cursor.png" alt=""></div>
+        <div class="stalker stalker09"><img src="IMG/cursor.png" alt=""></div>
+    <!-- </div> -->
+    <!-- header -->
+    <header>
+      <div>
+        <a href="index.html">
+          <h1 class="logo">
+            <div><img src="IMG/logo.webp" alt="LOGO" /></div>
+              <p class="link"><span class="en">MOONBUCKS</span></p>
+          </h1>
+        </a>
+      </div>
+      <div class="openbtn">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+      <nav id="g-nav">
+        <div id="g-nav-list">
+          <ul>
+            <li>
+              <a href="index.html#ABOUT" class="link">
+                <p class="nav_main"><span class="en">ABOUT</span></p>
+                <p class="nav_sub">お店について</p></a>
+            </li>
+            <li>
+              <a href="menu.html" class="link">
+                <p><span class="en">MENU</span></p>
+                <p class="nav_sub">メニュー</p></a>
+            </li>
+            <li>
+              <a href="program.html" class="link">
+                <p><span class="en">PROGRAM & SCHEDULE</span></p>
+                <p class="nav_sub">上映作品 & スケジュール</p></a>
+            </li>
+            <li>
+              <a href="access.html" class="link">
+                <p><span class="en">ACCESS</span></p>
+                <p class="nav_sub">アクセス</p></a>
+            </li>
+            <li>
+              <a href="#modal" class="modal link">
+                <p><span class="en">ONLINE SHOP</span></p>
+                <p class="nav_sub">オンラインショップ</p></a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+      <nav class="g-nav">
+        <ul>
+          <li>
+            <div class="nav_moon"></div>
+            <div>
+              <a href="index.html#ABOUT" class="link">
+                <p class="nav_main"><span class="en">ABOUT</span></p>
+                <p class="nav_sub">お店について</p>
+              </a>
+            </div>
+          </li>
+          <li>
+            <div class="nav_moon"></div>
+            <div>
+              <a href="menu.html" class="link">
+                <p><span class="en">MENU</span></p>
+                <p class="nav_sub">メニュー</p>
+                </a>
+            </div>
+          </li>
+          <li>
+            <div class="nav_moon"></div>
+            <div>
+              <a href="program.html" class="link">
+                <p><span class="en">PROGRAM</span></p>
+                <p class="nav_sub">上映作品</p>
+                </a>
+            </div>
+          </li>
+          <li>
+            <div class="nav_moon"></div>
+            <div>
+              <a href="access.html" class="link">
+                <p><span class="en">ACCESS</span></p>
+                <p class="nav_sub">アクセス</p></a>
+            </div>
+          </li>
+          <li>
+            <div class="nav_moon"></div>
+            <div>
+              <a href="#modal" class="modal link">
+                <p><span class="en">ONLINE SHOP</span></p>
+                <p class="nav_sub">オンラインショップ</p></a>
+            </div>
+          </li>
+        </ul>
+      </nav>
+    </header>
+    <!-- モーダルウィンドウ -->
+    <section id="modal" style="display: none">
+      <h2><span class="en">COMING SOON</span></h2>
+      <p>近日OPEN!! </p>
+      </section>
+    <!-- main -->
+    <main>
+      <div class="stars">
+        <!-- start -->
+        <section id="PROGRAM">
+        <div class="container">
+          <h2>
+            <div class="menu_logo animate__animated animate__fadeInUp wow">
+              <img src="IMG/PROGRAM/PROGRAM.webp" alt="MENU">
+            </div>
+          </h2>
+          <div class="program_pro">
+            <div class="sub_menu">
+              <h3>プロジェクションマッピング</h3>
+              <div class="sub_menu_text">
+                <p>時間帯（午前・日中・夜）によってテーマを変えて投影しております。</p>
+                <p>１時間ごとに１５分ほどの映像や音楽で、ガラッと変わる雰囲気をお楽しみください。</p>
+                <p>全ての時間帯で不定期に期間限定特別映像が投影されることもありますので、お見逃しなく！</p>
+              </div>
+            </div>
+            <table>
+              <tr>
+                <th rowspan="2" class="text_y">平日</th><th>7:00-12:00</th><th>12:00-17:00</th><th>17:00-23:00</th>
+              </tr>
+              <tr>
+                <td><img src="IMG/PROGRAM/program_pro_1.png" alt="映像テーマ１"></td>
+                <td><img src="IMG/PROGRAM/program_pro_2.png" alt="映像テーマ２"></td>
+                <td><img src="IMG/PROGRAM/program_pro_3.png" alt="映像テーマ３"></td>
+              </tr>
+              <tr>
+                <th rowspan="2" class="text_y">休日</th><th>7:00-12:00</th><th>12:00-17:00</th><th>17:00-23:00</th>
+              </tr>
+              <tr>
+                <td><img src="IMG/PROGRAM/program_pro_4.png" alt="映像テーマ４"></td>
+                <td><img src="IMG/PROGRAM/program_pro_5.png" alt="映像テーマ５"></td>
+                <td><img src="IMG/PROGRAM/program_pro_6.png" alt="映像テーマ６"></td>
+              </tr>
+            </table>
+          </div>
+          <div class="program_box">
+            <div class="sub_menu">
+              <h3>VRメニュー</h3>
+              <div class="sub_menu_text">
+                <p>どの時間帯でもお楽しみいただけるVRメニューです。</p>
+                <p>がっつり気分を変えたい、アイデアをひらめきたい、お仕事帰りのオン/オフの切り替えなどに。</p>
+                <p>専用のカプセルチェアで思う存分別世界を味わってください。</p>
+                <p>詳細クリックで内容をチェック！作品は随時追加される予定です。</p>
+                </div>
+                </div>
+            <div class="cl_flex">
+              <div class="cl_left_1">
+                <!-- 1 -->
+                <div class="program_menu">
+                  <div class="bn">
+                    <img src="IMG/PROGRAM/bn/1.jpg" alt="バナー1">
+                  </div>
+                    <h4>星降る夜のロマンス〜星座に秘められた恋の物語〜</h4>
+                  <div class="flex">
+                    <ul>
+                      <li>V R</li>
+                      <li>ストーリー</li>
+                    </ul>
+                    <p>30 min</p>
+                  </div>
+                  <div class="ac_btn"><i class="fa-solid fa-film"></i> 作品詳細</div>
+                  <div class="ac_box">
+                    <p>ある晩、星降る夜空を見上げた主人公の目に留まったの
+                      その星座の中には、恋愛にまつわる数々の物語が秘められていると言われていました。主人公は興味津々で、星座の伝説を調べ始めます。そして、星座にまつわる様々な物語や伝説を知るうちに、彼は自分自身も恋をするようになっていきます。
+                      彼の恋の相手は、彼が幼馴染だった少女でした。二人は一緒に星空を見上げながら、星座にまつわる物語や伝説について話し合います。そんな中、二人は自分たち自身も、星座の中に秘められたように恋をしていることに気づきます。
+                      そして、ある星降る夜に、主人公は彼女に告白します。彼女は戸惑いながらも、星降る夜のロマンスに心を開き、彼と一緒に星空の下で過ごすことを決めます。二人は星座の中に秘められた恋の物語を体現するかのように、ロマンチックな夜を過ごします。</p>
+                  </div>
+                          </div>
+                <!-- 2 -->
+                <div class="program_menu">
+                  <div class="bn">
+                    <img src="IMG/PROGRAM/bn/2.jpg" alt="バナー2">
+                  </div>
+                    <h4>宇宙の旅人たち〜遥か彼方の銀河〜</h4>
+                  <ul>
+                    <div class="flex">
+                      <ul>
+                        <li>V R</li>
+                        <li>ストーリー</li>
+                      </ul>
+                      <p>30 min</p>
+                    </div>
+                    <div class="ac_btn"><i class="fa-solid fa-film"></i> 作品詳細</div>
+                    <div class="ac_box">
+                      <p>宇宙の旅人たちが遥か彼方の銀河を旅する物語です。
+                        主人公は宇宙船のパイロットで、彼は船に乗り込み、多くの危険や未知の場所を探検しながら、新しい星や惑星を発見します。彼はまた、宇宙人たちや異星の文化に出会い、友情を育んでいきます。しかし、彼らの冒険は終わりがありません。宇宙にはまだ多くの未知の領域があり、彼らは常に新しい発見と冒険に向かって進み続けます。</p>
+                    </div>
+                  </div>
+              </div>
+              <div class="cl_center_1">
+                <!-- 3 -->
+                <div class="program_menu">
+                  <div class="bn">
+                    <img src="IMG/PROGRAM/bn/3.jpg" alt="バナー3">
+                  </div>
+                    <h4>シューティングスター</h4>
+                    <div class="flex">
+                      <ul>
+                        <li>V R</li>
+                        <li>ストーリー</li>
+                      </ul>
+                      <p>30 min</p>
+                    </div>
+                    <div class="ac_btn"><i class="fa-solid fa-film"></i> 作品詳細</div>
+                    <div class="ac_box">
+                      <p>夢を追いかける若者の物語です。「主人公は、自分の夢を実現するために、小さな町を出て大都市に移り住みます。そこで彼は、音楽や芸術、文化の世界で成功を収めたいと考えています。しかし、成功するためには多くの試練が待ち受けています。彼は、自分の才能を証明するために日々努力を重ね、人々に自分の音楽や芸術の世界を紹介し始めます。そして、ある日、彼は自分の目指す夢に大きな一歩を踏み出す機会を手に入れます。シューティングスターの輝きが彼を照らし、彼は自分の夢を追いかけていくために、勇気と決意を新たにします。</p>
+                    </div>
+                  </div>
+                <!-- 4 -->
+                <div class="program_menu">
+                  <div class="bn">
+                    <img src="IMG/PROGRAM/bn/4.jpg" alt="バナー4">
+                  </div>
+                    <h4>星の生まれる物語〜光と闇の宇宙〜</h4>
+                    <div class="flex">
+                      <ul>
+                        <li>V R</li>
+                        <li>ストーリー</li>
+                      </ul>
+                      <p>30 min</p>
+                    </div>
+                    <div class="ac_btn"><i class="fa-solid fa-film"></i> 作品詳細↓</div>
+                    <div class="ac_box">
+                      <p>宇宙の始まりから、星々が生まれるまでの物語です。宇宙には光と闇があり、それぞれの力が作り出す美しい風景が広がっています。物語は、最初に宇宙の誕生から始まり、星が形成されるまでの数千万年間にわたる時間を描いています。この物語では、宇宙に生まれた星たちの誕生に焦点が当てられており、星々が誕生するためには光と闇の力が必要であることが描かれています。そして、星々は、宇宙の中で輝きを放ち、生命を育みます。物語は、宇宙の美しさや謎を探求しながら、光と闇のバランスが保たれることの重要性を伝えています。</p>
+                    </div>
+                  </div>
+              </div>
+              <div class="cl_right_1">
+              <!-- 5 -->
+                <div class="program_menu">
+                  <div class="bn">
+                    <img src="IMG/PROGRAM/bn/5.jpg" alt="バナー5">
+                  </div>
+                    <h4>幻想的な星座物語〜天空に輝く神話たち〜</h4>
+                    <div class="flex">
+                      <ul>
+                        <li>V R</li>
+                        <li>ストーリー</li>
+                      </ul>
+                      <p>30 min</p>
+                    </div>
+                    <div class="ac_btn"><i class="fa-solid fa-film"></i> 作品詳細↓</div>
+                    <div class="ac_box">
+                      <p>星座と神話をテーマにした幻想的な物語です。主人公は、星空を見上げることが好きで、夜空に輝く星座には憧れを抱いています。ある日、彼は夜空を見上げていると、星座が輝く光景に包まれます。そして、彼は、星座にまつわる古代の神話の物語を聞くことができます。物語には、ギリシャ神話やローマ神話などの古代の神話が登場します。主人公は、神話の中で語られる人物たちとともに冒険を繰り広げ、星座にまつわる神秘的な力を知ります。そして、彼は自分自身についても新たな発見をすることになります。物語は、幻想的な世界観と神話の力強さを描きながら、星座にまつわる知識や神秘を探求します。</p>
+                    </div>
+                  </div>
+                <!-- 6 -->
+                <div class="program_menu">
+                  <div class="bn">
+                    <img src="IMG/PROGRAM/bn/6.jpg" alt="バナー6">
+                  </div>
+                    <h4>星空に浮かぶ幻想的な惑星〜宇宙の美しき風景〜</h4>
+                    <div class="flex">
+                      <ul>
+                        <li>V R</li>
+                        <li>ストーリー</li>
+                      </ul>
+                      <p>30 min</p>
+                    </div>
+                    <div class="ac_btn"><i class="fa-solid fa-film"></i> 作品詳細↓</div>
+                    <div class="ac_box">
+                      <p>宇宙の美しさをテーマにした物語です。主人公は、宇宙旅行に興味を持ち、ある惑星にやってきます。その惑星は、まるで幻想的な絵画のように美しい景色が広がっています。主人公は、そこで出会った住民たちとともに、その惑星の美しさや歴史について学びます。しかし、そこには謎が潜んでいました。主人公は、惑星の秘密を解き明かすため、住民たちとともに冒険を繰り広げます。物語は、宇宙の美しさや謎解き、そして人々との出会いを通して、主人公が成長していく姿を描いています。幻想的な世界観と美しい風景が織りなす、宇宙の魅力にあふれた物語となっています。</p>
+                    </div>
+                  </div>
+              </div>
+              <div class="cl_left_2">
+                <!-- 7 -->
+                <div class="program_menu">
+                  <div class="bn">
+                    <img src="IMG/PROGRAM/bn/7.jpg" alt="バナー7">
+                  </div>
+                    <h4>アインシュタインの軌跡</h4>
+                    <div class="flex">
+                      <ul>
+                        <li>V R</li>
+                        <li>ストーリー</li>
+                      </ul>
+                      <p>30 min</p>
+                    </div>
+                    <div class="ac_btn"><i class="fa-solid fa-film"></i> 作品詳細↓</div>
+                    <div class="ac_box">
+                      偉大な物理学者アルバート・アインシュタインの生涯を描いた物語です。物語は、彼が若き日の頃から始まり、彼の功績となる特殊相対性理論や一般相対性理論の発見、そしてノーベル物理学賞を受賞するまでの軌跡を追います。彼の卓越した知性と優れた観察力によって、彼は当時の物理学の常識を覆し、新たな科学の世界を開拓していきます。しかし、彼が直面した苦難や人間ドラマ、そして第二次世界大戦中に反核運動に取り組む姿勢なども描かれ、物語は彼の人間的な面も描き出しています。物理学に興味のある人はもちろん、彼の卓越した知性に魅了された人にもおすすめの物語です。
+                    </div>
+                  </div>
+                <!-- 8 -->
+                <div class="program_menu">
+                  <div class="bn">
+                    <img src="IMG/PROGRAM/bn/8.jpg" alt="バナー8">
+                  </div>
+                    <h4>宇宙に広がる壮大なる神秘〜謎に包まれた宇宙の真実〜</h4>
+                    <div class="flex">
+                      <ul>
+                        <li>V R</li>
+                        <li>ドキュメンタリー</li>
+                      </ul>
+                      <p>30 min</p>
+                    </div>
+                    <div class="ac_btn"><i class="fa-solid fa-film"></i> 作品詳細↓</div>
+                    <div class="ac_box">
+                      宇宙に関する謎や不思議に迫るドキュメンタリー映像です。宇宙は私たちが知る限り、無限の広がりと謎に満ちた存在です。この番組では、最新の科学技術を駆使して、宇宙の神秘に迫ります。宇宙に浮かぶ美しい星々や惑星、そして恒星など、宇宙空間の驚異的な光景を映像で紹介しながら、私たちが抱く宇宙へのイメージを刷新してくれます。また、ブラックホールやダークマター、宇宙の起源についての最新の研究成果や仮説にも触れながら、宇宙の真実を探求します。宇宙に興味のある人はもちろん、未知なる宇宙への探究心を掻き立てられる、壮大なる宇宙ドキュメンタリーです。
+                    </div>
+                  </div>
+              </div>
+              <div class="cl_center_2">
+                <!-- 9 -->
+                <div class="program_menu">
+                  <div class="bn">
+                    <img src="IMG/PROGRAM/bn/9.png" alt="バナー9">
+                  </div>
+                    <h4>宇宙の物語</h4>
+                    <div class="flex">
+                      <ul>
+                        <li>V R</li>
+                        <li>ストーリー</li>
+                      </ul>
+                      <p>30 min</p>
+                    </div>
+                    <div class="ac_btn"><i class="fa-solid fa-film"></i> 作品詳細↓</div>
+                    <div class="ac_box">
+                      数千年後の未来、人類は宇宙の彼方に進出し、新たなる冒険と発見の舞台を広げていました。主人公であるプレイヤーは、宇宙探査船のクルーとして、未知の領域を探索することになります。
+                      物語は、地球の資源が枯渇し、人類が新たな生存空間を求めて銀河系の各地に植民地を築く時代から始まります。プレイヤーは若き探検家として、新たな植民地の建設や資源の探索、宇宙空間での危険なエンカウンターに挑戦します。
+                      しかし、人類の進出と共に、宇宙には未知の存在や謎めいた種族も存在していました。彼らとの出会いや対話、あるいは戦いが物語を進める重要な要素となります。プレイヤーは友好的な外宇宙種族と協力し、宇宙の秘密や人類の起源に迫るかもしれません。また、敵対的な種族との戦闘や未知の異星文明との衝突も避けられません。
+                      プレイヤーの選択や行動は物語の展開や結末に影響を与えます。探索の中で発見される謎や古代の遺産、技術の開発など、プレイヤーは宇宙の広大な世界で自由に行動し、自身の物語を築いていきます。
+                      宇宙の物語は、壮大なスケールの冒険、宇宙探索の興奮、未知の文明との交流、そして人類の未来に関わる選択の重さを描いた壮大なゲーム体験です。
+                    </div>
+                  </div>
+                <!-- 10 -->
+                <div class="program_menu">
+                  <div class="bn">
+                    <img src="IMG/PROGRAM/bn/10.png" alt="バナー10">
+                  </div>
+                    <h4>天空の幻想曲〜宇宙の美を楽しむ〜</h4>
+                    <div class="flex">
+                      <ul>
+                        <li>V R</li>
+                        <li>ストーリー</li>
+                        <li>音楽</li>
+                      </ul>
+                      <p>30 min</p>
+                    </div>
+                    <div class="ac_btn"><i class="fa-solid fa-film"></i> 作品詳細↓</div>
+                    <div class="ac_box">
+                      宇宙の美しさをテーマにした幻想的な物語です。
+                      物語は、天空の幻想的な風景が広がる映像が投影されるところから始まります。壮大な宇宙の舞台に、美しい星々や銀河が広がり、神秘的な音楽が流れます。
+                      
+                      映像は、宇宙のさまざまな場所や天体を巡る旅に連れて行ってくれます。遠くの星々に心を惹かれながら、美しい宇宙の風景を楽しむことができます。また、星座や流れ星、宇宙の光景が鮮やかに描かれ、まるで夢の中にいるような感覚を味わいます。
+                      
+                      物語は言葉ではなく、映像と音楽によって表現されます。宇宙の美しさに身を委ねながら、心と共に宇宙の旅に浸ります。天空の幻想的な風景と美しい音楽が融合し、観客を宇宙の壮大な魅力に引き込むのです。
+                    </div>
+                  </div>
+              </div>
+              <div class="cl_right_2">
+                <!-- 11 -->
+                <div class="program_menu">
+                  <div class="bn">
+                    <img src="IMG/PROGRAM/bn/11.png" alt="バナー11">
+                  </div>
+                    <h4>星の秘密〜宇宙の謎に迫る〜</h4>
+                    <div class="flex">
+                      <ul>
+                        <li>V R</li>
+                        <li>ストーリー</li>
+                        <li>音楽</li>
+                      </ul>
+                      <p>30 min</p>
+                    </div>
+                    <div class="ac_btn"><i class="fa-solid fa-film"></i> 作品詳細↓</div>
+                    <div class="ac_box">
+                      宇宙の謎について探求する物語です。
+                      物語は、謎めいた宇宙の映像が広がるところから始まります。映像は、宇宙空間や星々の美しい風景を描きながら、謎に包まれた宇宙の秘密に迫っていきます。
+                      物語の中では、観客は宇宙の探検者として、宇宙のさまざまな謎について学びます。ブラックホールやダークマターの存在や性質、宇宙の起源や終焉に関する理論、そして生命の可能性が存在する宇宙の遠くの場所についての情報が提供されます。
+                      映像と音楽が絶妙に組み合わさり、観客はまるで宇宙の中にいるかのような感覚を味わいます。謎めいた映像と劇的な音楽が、宇宙の神秘に引き込まれるような体験を提供します。
+                      宇宙の謎についての知識を広げるだけでなく、宇宙の壮大さや不思議さに触れ、人間の好奇心と探求心を刺激します。星の秘密に迫りながら宇宙の広大な領域を探索し、新たな発見への興奮を味わうのです。
+                    </div>
+                  </div>
+                <!-- 12 -->
+                <div class="program_menu">
+                  <div class="bn">
+                    <img src="IMG/PROGRAM/bn/12.png" alt="バナー12">
+                  </div>
+                    <h4>銀河の冒険〜宇宙の驚異を探索する〜</h4>
+                    <div class="flex">
+                      <ul>
+                        <li>V R</li>
+                        <li>ストーリー</li>
+                        <li>音楽</li>
+                      </ul>
+                      <p>30 min</p>
+                    </div>
+                    <div class="ac_btn"><i class="fa-solid fa-film"></i> 作品詳細↓</div>
+                    <div class="ac_box">
+                      宇宙の驚異に迫る冒険を描いた物語です。主人公は、勇敢で好奇心旺盛な探検家であり、宇宙の未知の領域を探索する使命を帯びています。彼は銀河を舞台に、新たな星系や宇宙の驚異を発見するために、仲間とともに壮大な冒険に身を投じます。さまざまな宇宙の現象や天体の美しさを紹介しながら、主人公たちの冒険の軌跡を追います。ブラックホールや彗星の軌道、銀河間の旅など、宇宙の驚異的な現象に触れながら宇宙の広大さと神秘を感じることができます。映像と音楽が相まって、まるで宇宙の冒険家として、未知の領域を探索するような体験を味わい宇宙の壮大さと探求の喜びを伝えてくれます。
+                    </div>
+                  </div>
+              </div>
+            </div>
+        </div>
+        <!-- ミニゲーム -->
+        <div class="sub_menu">
+          <h3>ミニゲーム</h3>
+          <div class="sub_menu_text">
+        <p>【クイズ de クーポン！】</p>
+        <p>宇宙に関するクイズに答えて、初回限定のお得なクーポンをGET！
+        </p>
+        </div>
+        </div>
+        <div id="tab_menu">
+          <ul class="tab_area">
+            <li class="tab active">TOP</li>
+            <li class="tab">Q-1</li>
+            <li class="tab">A-1</li>
+            <li class="tab">Q-2</li>
+            <li class="tab">A-2</li>
+            <li class="tab">Q-3</li>
+            <li class="tab">A-3</li>
+            <li class="tab">Q-4</li>
+            <li class="tab">A-4</li>
+            <li class="tab">Q-5</li>
+            <li class="tab">A-5</li>
+            <li class="tab">★</li>
+          </ul>
+          <div class="panel_area">
+            <div class="panel active"><img src="IMG/PROGRAM/quiz/q_1.png" alt="Quiz_top"></div>
+            <div class="panel"><img src="IMG/PROGRAM/quiz/q_2.png" alt="Quiz_1-1"></div>
+            <div class="panel"><img src="IMG/PROGRAM/quiz/q_3.png" alt="Quiz_1-2"></div>
+            <div class="panel"><img src="IMG/PROGRAM/quiz/q_4.png" alt="Quiz_2-1"></div>
+            <div class="panel"><img src="IMG/PROGRAM/quiz/q_5.png" alt="Quiz_2-2"></div>
+            <div class="panel"><img src="IMG/PROGRAM/quiz/q_6.png" alt="Quiz_3-1"></div>
+            <div class="panel"><img src="IMG/PROGRAM/quiz/q_7.png" alt="Quiz_3-2"></div>
+            <div class="panel"><img src="IMG/PROGRAM/quiz/q_8.png" alt="Quiz_4-1"></div>
+            <div class="panel"><img src="IMG/PROGRAM/quiz/q_9.png" alt="Quiz_4-2"></div>
+            <div class="panel"><img src="IMG/PROGRAM/quiz/q_10.png" alt="Quiz_5-1"></div>
+            <div class="panel"><img src="IMG/PROGRAM/quiz/q_11.png" alt="Quiz_5-2"></div>
+            <div class="panel"><img src="IMG/PROGRAM/quiz/q_12.png" alt="Quiz_end"></div>
+          </div>
+        </div>
+      </section>
+      <!-- end -->
+    </div>
+    </main>
+    <!-- footer -->
+    <footer>
+      <div class="footer_bg">
+        <img src="IMG/logo.webp" alt="logo" />
+        <span class="en">MOONBUCKS</span>
+      </div>
+      <div class="flex">
+        <div class="footer_left">
+          <ul>
+            <li><a href="#" class="link">サイトマップ</a></li>
+            <li><a href="#" class="link">ご利用にあたって</a></li>
+            <li><a href="#" class="link">プライバシーポリシー</a></li>
+            <li><a href="#" class="link">企業情報</a></li>
+            <li><a href="#" class="link">採用情報</a></li>
+          </ul>
+        </div>
+        <div class="footer_center">         
+          <h4>店舗一覧</h4>
+          <ul class="tel">
+            <li>
+              <a href="access.html#sapporo" class="link">札幌駅前店</a>
+              <a href="tel:000-000-0000" class="link"
+                ><div><i class="fa-solid fa-phone"></i></div
+              ></a>
+            </li>
+            <li>
+              <a href="access.html#odori" class="link">大通駅前店</a>
+              <a href="tel:000-000-0000" class="link"
+                ><div><i class="fa-solid fa-phone"></i></div
+              ></a>
+            </li>
+            <li>
+              <a href="access.html#susukino" class="link">すすきの店</a>
+              <a href="tel:000-000-0000" class="link"
+                ><div><i class="fa-solid fa-phone"></i></div
+              ></a>
+            </li>
+          </ul></div>
+        <div class="footer_right">
+          <a href="http://rntl.php.xdomain.jp/BBS/" target="_blank" rel="noopener noreferrer">
+            <div class="voice">お客様の声</div>
+          </a>
+        </div>
+      </div>
+      <ul class="sns">
+        <li>
+          <a href="https://twitter.com/" class="link"
+            ><i class="fa-brands fa-twitter"></i
+          ></a>
+        </li>
+        <li>
+          <a href="https://www.instagram.com/" class="link"
+            ><i class="fa-brands fa-instagram"></i
+          ></a>
+        </li>
+        <li>
+          <a href="https://www.facebook.com/" class="link"
+            ><i class="fa-brands fa-facebook"></i
+          ></a>
+        </li>
+      </ul>
+      <p class="copy"><small>&copy; 2023 MOONBUCKS All rights reserved.</small></p>
+    </footer>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+    <script src="JS/bg_star.js"></script>
+    <script src="JS/cursor.js"></script>
+    <script src="JS/tab_menu.js"></script>
+    <script src="JS/han.js"></script>
+    <script src="JS/accordion.js"></script>
+    <script src="JS/modaal.min.js"></script>
+    <script src="JS/wow.min.js"></script>
+    <script>
+      $(".modal").modaal();
+      new WOW().init();
+    </script>
+  </body>
+</html>

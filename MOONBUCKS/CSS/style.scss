@@ -1,0 +1,1336 @@
+@charset "UTF-8";
+// 変数
+$N: #080739;
+$Y: #f0dd33;
+$P: #120757;
+$G: #504f66;
+$Na: rgba(8, 7, 57, 0.6);
+$Ya: rgba(240, 221, 51, 0.6);
+$Pa: rgba(18, 7, 87, 0.6);
+$Ga: rgba(80, 79, 102, 0.6);
+
+// 全体_1
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  list-style: none;
+  img {
+    width: 100%;
+    vertical-align: bottom;
+  }
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  p {
+    margin: 0;
+  }
+}
+// 全体_2
+html {
+  overflow: auto;
+  scroll-behavior: smooth;
+  body {
+    overflow: hidden;
+    background: $N;
+    color: white;
+    font-family: "Noto Sans JP", sans-serif;
+    a {
+      text-decoration: none;
+      color: white;
+      z-index: 1;
+    }
+    // hover線引く
+    .link {
+      padding: 0.1em 0.2em;
+      position: relative;
+      display: inline-block;
+      &::after {
+        position: absolute;
+        bottom: 0px;
+        left: 0;
+        content: "";
+        width: 0;
+        height: 20px;
+        background-color: rgba(240, 221, 51, 0.5);
+        transition: 0.5s ease-out;
+        z-index: -1;
+      }
+      &:hover::after {
+        width: 100%;
+      }
+    }
+    // hoverデカナル
+    .up p,
+    .up img {
+      overflow: hidden;
+      width: 100%;
+      transform: scale(1);
+      transition: 0.3s linear;
+      &:hover {
+        transform: scale(1.05);
+        opacity: 0.6;
+      }
+    }
+  }
+  span {
+    &.en {
+      font-family: "Bungee";
+      width: 100%;
+      height: fit-content;
+    }
+    &.jp {
+      font-family: "Noto Sans JP", sans-serif;
+    }
+    &.Y {
+      color: $Y;
+    }
+  }
+  // スクロールバー
+  ::-webkit-scrollbar {
+    width: 15px;
+  }
+  ::-webkit-scrollbar-track {
+    background-color: $N;
+  }
+  ::-webkit-scrollbar-thumb {
+    background-color: $Y;
+  }
+  /* 星空の背景 */
+  main {
+    .stars {
+      position: relative;
+      width: 100%; /* 星空の横幅 */
+      height: 100%; /* 星空の縦幅 */
+      background: $N; /* 星空の背景色 */
+      overflow: hidden; /* 星が枠外にはみ出すのを防ぐ */
+    }
+    /* 星のスタイル */
+    .star {
+      position: absolute;
+      display: block;
+      background-color: #fff; /* 星の色 */
+      border-radius: 50%;
+      box-shadow: 0 0 4px 2px rgba(#fff, 0.2); /* 星の影 */
+      opacity: 0;
+      animation: twinkle 5s infinite;
+    }
+    /* 星がキラキラ光るアニメーション */
+    @keyframes twinkle {
+      0% {
+        opacity: 0;
+      }
+
+      50% {
+        transform: scale(1.1);
+        opacity: 1;
+      }
+
+      100% {
+        opacity: 0;
+        transform: scale(1);
+      }
+    }
+  }
+  .sub_menu {
+    width: 100%;
+    h3 { 
+      width: 90%;
+      max-width: 600px;
+      padding: 10px 40px;
+      margin: 50px auto 20px;
+      text-align: center;
+      font-size: 1.3rem;
+      letter-spacing: 0.1rem;
+      background: $N;
+      border-radius: 10px;
+      border: 15px double white;
+    }
+    .sub_menu_text {
+      width: 80%;
+      max-width: 550px;
+      margin: 0 auto 20px;
+      font-size: 0.8rem;
+      span.border {
+        text-decoration: underline;
+      }
+    }
+  }
+}
+// カーソル
+body {
+  position: relative;
+  #cursor {
+    position: fixed;
+    width: 10px;
+    height: 10px;
+    background-color: white;
+    border-radius: 50%;
+    margin: -5px 0 0 -5px;
+    z-index: 10000;
+    pointer-events: none;
+  }
+  .stalker {
+    position: fixed;
+    z-index: 9999;
+    pointer-events: none;
+    @keyframes stalker {
+      0% {
+        transform: rotate(0deg) translate(50px) rotate(0deg);
+        opacity: 1;
+      }
+      100% {
+        transform: rotate(360deg) translate(50px) rotate(360deg);
+        opacity: 1;
+      }
+    }
+  }
+  .stalker01 {
+    width: 5px;
+    margin: -10px 0 0px -2.5px;
+    animation: stalker 9s infinite linear;
+    opacity: 0;
+  }
+  .stalker02 {
+    width: 10px;
+    margin: -10px 0 0px -5px;
+    animation: stalker 9s infinite linear;
+    animation-delay: 1s;
+    opacity: 0;
+  }
+  .stalker03 {
+    width: 15px;
+    margin: -10px 0 0px -7.5px;
+    animation: stalker 9s infinite linear;
+    animation-delay: 2s;
+    opacity: 0;
+  }
+  .stalker04 {
+    width: 20px;
+    margin: -10px 0 0 -10px;
+    animation: stalker 9s infinite linear;
+    animation-delay: 3s;
+    opacity: 0;
+  }
+  .stalker05 {
+    width: 25px;
+    margin: -10px 0 0 -12.5px;
+    animation: stalker 9s infinite linear;
+    animation-delay: 4s;
+    opacity: 0;
+  }
+  .stalker06 {
+    width: 20px;
+    margin: -10px 0 0 -10px;
+    animation: stalker 9s infinite linear;
+    animation-delay: 5s;
+    opacity: 0;
+  }
+  .stalker07 {
+    width: 15px;
+    margin: -10px 0 0 -7.5px;
+    animation: stalker 9s infinite linear;
+    animation-delay: 6s;
+    opacity: 0;
+  }
+  .stalker08 {
+    width: 10px;
+    margin: -10px 0 0 -5px;
+    animation: stalker 9s infinite linear;
+    animation-delay: 7s;
+    opacity: 0;
+  }
+  .stalker09 {
+    width: 5px;
+    margin: -10px 0 0 -2.5px;
+    animation: stalker 9s infinite linear;
+    animation-delay: 8s;
+    opacity: 0;
+  }
+}
+// header
+header {
+  position: fixed;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 10px;
+  width: 100%;
+  height: 60px;
+  background-color: $Pa;
+  z-index: 100;
+  border-top: 5px solid $Y;
+  .logo {
+    display: flex;
+    align-items: center;
+    height: 100%;
+    img {
+      width: 45px;
+      height: 45px;
+      margin-right: 10px;
+    }
+    p {
+      font-size: 1.5rem;
+    }
+  }
+  ul {
+    li {
+      display: flex;
+      align-items: center;
+      margin-right: 15px;
+      .nav_moon {
+        min-width: 40px;
+        min-height: 40px;
+        margin-right: 5px;
+        background-color: $Y;
+        border-radius: 50%;
+        position: relative;
+      }
+      p {
+        line-height: 1.3rem;
+      }
+      .en {
+        font-size: 1.3rem;
+      }
+      .nav_sub {
+        font-size: 0.6rem;
+        &::before {
+          content: "⇒";
+        }
+      }
+    }
+  }
+  li:hover .nav_moon::before {
+    content: "★";
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    background-color: $P;
+    transform-origin: right top;
+    animation: moon 1s ease forwards;
+  }
+  @keyframes moon {
+    0% {
+      transform: scale(0);
+    }
+    100% {
+      transform: scale(0.7);
+    }
+  }
+  .g-nav {
+    display: none;
+  }
+  // ハンバーガーナビ
+  #g-nav {
+    position: fixed;
+    z-index: 100;
+    top: 0;
+    right: -100%;
+    width: 100%;
+    height: 100vh;
+    background: $Pa;
+    transition: all 0.6s;
+    &.panelactive {
+      right: 0;
+    }
+    &.panelactive #g-nav-list {
+      position: fixed;
+      z-index: 999;
+      width: 100%;
+      height: 100vh;
+      overflow: auto;
+      -webkit-overflow-scrolling: touch;
+    }
+    ul {
+      position: absolute;
+      z-index: 999;
+      top: 50%;
+      right: 50%;
+      transform: translate(50%, -50%);
+    }
+  }
+  // ハンバーガーボタン
+  .openbtn {
+    position: relative;
+    width: 45px;
+    height: 45px;
+    border-radius: 50px;
+    z-index: 1000;
+    cursor: pointer;
+    span {
+      display: inline-block;
+      transition: all 0.4s;
+      position: absolute;
+      left: 13px;
+      height: 2px;
+      border-radius: 5px;
+      background: $Y;
+      width: 45%;
+    }
+    span:nth-of-type(1) {
+      top: 13px;
+    }
+    span:nth-of-type(2) {
+      top: 19px;
+    }
+    span:nth-of-type(3) {
+      top: 25px;
+    }
+    span:nth-of-type(3)::after {
+      content: "Menu";
+      position: absolute;
+      top: 2px;
+      left: -5px;
+      color: $Y;
+      font-size: 0.4rem;
+      text-transform: uppercase;
+    }
+    &.active span:nth-of-type(1) {
+      top: 14px;
+      left: 18px;
+      transform: translateY(6px) rotate(-45deg);
+      width: 30%;
+    }
+    &.active span:nth-of-type(2) {
+      opacity: 0;
+    }
+    &.active span:nth-of-type(3) {
+      top: 26px;
+      left: 18px;
+      transform: translateY(-6px) rotate(45deg);
+      width: 30%;
+    }
+    &.active span:nth-of-type(3)::after {
+      content: "Close";
+      transform: translateY(0) rotate(-45deg);
+      top: 5px;
+      left: 4px;
+    }
+  }
+}
+// top
+main {
+  margin-top: 60px;
+  width: 100%;
+  .top {
+    width: 100%;
+    position: relative;
+    .logo {
+      position: absolute;
+      top: 0;
+      left: 5%;
+      .logo_sub {
+        margin-left: 3.5rem;
+        font-size: 1rem;
+      }
+    }
+    .logo_flex {
+      display: flex;
+      align-items: center;
+      height: 1rem;
+      img {
+        width: 50px;
+        height: 50px;
+        margin-right: 0.2rem;
+      }
+      p {
+        font-size: 2.5rem;
+      }
+    }
+  }
+  .top_sub_img {
+    position: absolute;
+    bottom: -10%;
+    left: -15%;
+    width: 40%;
+    max-width: 500px;
+    animation: rooling 40s infinite linear 1s both;
+  }
+  @keyframes rooling {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(360deg);
+    }
+  }
+  //top_moon
+  .top {
+    position: relative;
+    .moon01 {
+      position: absolute;
+      top: -15%;
+      right: -20%;
+      width: 50%;
+      height: 85%;
+      border-radius: 50%;
+      background-color: $Ya;
+      z-index: 1;
+      animation: rooling 15s infinite linear 1s both;
+    }
+    .moon02 {
+      position: absolute;
+      top: 40%;
+      right: -10%;
+      width: 30%;
+      height: 50%;
+      border-radius: 50%;
+      background-color: #12075799;
+      z-index: 2;
+      animation: rooling 10s infinite linear 1s both;
+    }
+  }
+  // top_end
+  .top_sub {
+    display: flex;
+    padding: 20px 0;
+    width: 100%;
+    background: $G;
+    border-top: 50px solid $P;
+    border-bottom: 50px solid $P;
+    .slide {
+      display: flex;
+      animation: loop-slide 40s infinite linear 1s both;
+      li {
+        img {
+          width: 200px;
+          height: 100px;
+          padding-right: 20px;
+          object-fit: cover;
+          opacity: 0.8;
+        }
+      }
+      @keyframes loop-slide {
+        from {
+          transform: translateX(0);
+        }
+        to {
+          transform: translateX(-100%);
+        }
+      }
+    }
+  }
+  #NEWS {
+    margin: 0 auto;
+    h2 {
+      color: $Y;
+      text-align: center;
+      letter-spacing: 0.1rem;
+    }
+    dl {
+      width: 80%;
+      max-width: 500px;
+      height: 100px;
+      overflow: auto;
+      margin: 0 auto;
+      background-color: $P;
+      dt {
+        float: left;
+        margin-right: 20px;
+      }
+    }
+  }
+}
+// about
+#ABOUT {
+  .container {
+    position: relative;
+    padding: 150px 0;
+    margin: 200px auto 20px;
+    width: 100%;
+    background-color: $P;
+    .menu_logo {
+      position: absolute;
+      top: -100px;
+      width: 100%;
+      text-align: center;
+      img {
+        width: 200px;
+        height: 200px;
+      }
+    }
+  }
+  .about_box {
+    width: 100%;
+    padding: 30px 0;
+    margin-bottom: 50px;
+    background-color: $G;
+    h3 {
+      padding: 20px 0 15px;
+      font-size: 2rem;
+      text-align: right;
+      text-shadow: 7px 6px #080739;
+      border-top: 5px solid $Ya;
+    }
+    .left {
+      width: 90%;
+      margin: 0 auto 50px;
+      img {
+        width: 100%;
+        margin-right: 20px;
+        box-shadow: 10px 10px $Pa;
+      }
+    }
+    h4 {
+      width: 90%;
+      padding: 5px 0;
+      margin: 10px auto;
+      font-size: 1.5rem;
+      text-align: center;
+      background-color: $P;
+    }
+    .about_text {
+      max-width: 90%;
+      padding: 30px;
+      margin: 20px auto;
+      color: $P;
+      font-size: 0.9rem;
+      border-radius: 30px;
+      line-height: 1.5rem;
+      background-color: rgba(204, 204, 204, 0.6);
+      box-shadow: 10px 10px $Pa;
+    }
+  }
+  .about_sub {
+    width: 100%;
+    padding: 50px 0;
+    background: $N;
+    .about_sub_box {
+      width: 90%;
+      margin: 50px auto;
+      .about_sub_left {
+        width: 100%;
+        margin: 10px auto 50px;
+        box-shadow: 10px 10px $Ga;
+      }
+      .about_sub_right {
+        width: 90%;
+        height: fit-content;
+        padding: 10px 30px 20px;
+        margin: 0 auto;
+        text-align: center;
+        background: $Ga;
+        h3 {
+          width: 100%;
+          margin: 10px auto;
+          color: $Y;
+          font-size: 2rem;
+          text-align: center;
+        }
+        p {
+          padding-bottom: 20px;
+          border-bottom: 5px solid $Ya;
+        }
+      }
+    }
+  }
+  .coffee_menu {
+    width: 500px;
+    margin: 0 auto;
+    p {
+      padding: 5px;
+      text-align: center;
+      letter-spacing: 0.2rem;
+      background: $Ga;
+    }
+    img {
+      width: 500px;
+    }
+  }
+}
+// menu
+#MENU {
+  .container {
+    position: relative;
+    padding: 50px 0;
+    margin: 150px auto 20px;
+    width: 100%;
+    background-color: $P;
+    .menu_logo {
+      position: absolute;
+      top: -100px;
+      width: 100%;
+      text-align: center;
+      img {
+        width: 200px;
+        height: 200px;
+      }
+    }
+    .menu_box {
+      width: 100%;
+      padding: 50px 0;
+      margin: 0 auto;
+      background-color: $G;
+      ul {
+        li {
+          width: 80%;
+          margin: 0 auto 100px;
+        }
+      }
+    }
+  }
+  .menu_top {
+    margin: 50px 0;
+    padding: 30px 0;
+    background: $Ga;
+  }
+  // slider
+  .slider {
+    /*横幅94%で左右に余白を持たせて中央寄せ*/
+    width: 94%;
+    margin: 0 auto;
+  }
+  .slider img {
+    width: 60vw; /*スライダー内の画像を60vwにしてレスポンシブ化*/
+    height: 400px;
+    object-fit: cover;
+    border: 10px solid $Pa;
+    // box-shadow:  10px 10px $Pa;
+  }
+  .slider .slick-slide {
+    transform: scale(0.8); /*左右の画像のサイズを80%に*/
+    transition: all 0.5s; /*拡大や透過のアニメーションを0.5秒で行う*/
+    opacity: 0.5; /*透過50%*/
+  }
+  .slider .slick-slide.slick-center {
+    transform: scale(1); /*中央の画像のサイズだけ等倍に*/
+    opacity: 1; /*透過なし*/
+  }
+  /*矢印の設定*/
+  /*戻る、次へ矢印の位置*/
+  .slick-prev,
+  .slick-next {
+    position: absolute; /*絶対配置にする*/
+    top: 42%;
+    outline: none; /*クリックをしたら出てくる枠線を消す*/
+    border-top: 2px solid #666; /*矢印の色*/
+    border-right: 2px solid #666; /*矢印の色*/
+    height: 15px;
+    width: 15px;
+  }
+  .slick-prev {
+    /*戻る矢印の位置と形状*/
+    left: -1.5%;
+    transform: rotate(-135deg);
+  }
+  .slick-next {
+    /*次へ矢印の位置と形状*/
+    right: -1.5%;
+    transform: rotate(45deg);
+  }
+  /*ドットナビゲーションの設定*/
+  .slick-dots {
+    text-align: center;
+    margin: 20px 0 0 0;
+  }
+  .slick-dots li {
+    display: inline-block;
+    margin: 0 10px;
+  }
+  .slick-dots button {
+    color: transparent;
+    outline: none;
+    width: 15px; /*ドットボタンのサイズ*/
+    height: 15px; /*ドットボタンのサイズ*/
+    display: block;
+    border-radius: 50%;
+    background: $P; /*ドットボタンの色*/
+  }
+  .slick-dots .slick-active button {
+    background: $Y; /*ドットボタンの現在地表示の色*/
+  }
+  .click {
+    width: 100%;
+    padding: 5px;
+    margin-bottom: 50px;
+    font-size: 1.3rem;
+    text-align: center;
+  }
+}
+// program
+#PROGRAM {
+  .container {
+    position: relative;
+    padding: 100px 0;
+    margin: 150px auto 50px;
+    width: 100%;
+    background-color: $P;
+    .menu_logo {
+      position: absolute;
+      top: -100px;
+      width: 100%;
+      text-align: center;
+      img {
+        width: 200px;
+        height: 200px;
+      }
+    }
+  }
+  .program_pro {
+    width: 100%;
+    margin: 0 auto;
+  }
+  table {
+    width: 90%;
+    max-width: 900px;
+    margin: 50px auto;
+    border-spacing: 15px;
+    background-color: $N;
+    .text_y {
+      writing-mode: vertical-rl;
+      color: $N;
+      background-color: $Y;
+    }
+    th {
+      font-size: 0.8rem;
+      background-color: $G;
+    }
+    td {
+      border: 1px solid $G;
+    }
+  }
+  .cl_flex {
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+  }
+  .program_box {
+    width: 100%;
+    padding: 50px 0;
+    background-color: $Ga;
+    .program_menu {
+      width: 400px;
+      margin: 50px auto 0;
+      background-color: #ccc;
+      border: 1px solid;
+      h4 {
+        padding: 10px;
+        font-size: 0.8rem;
+        text-align: center;
+        background-color: #292929;
+      }
+      .flex {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 10px;
+        ul {
+          display: flex;
+          font-size: 0.6rem;
+          li {
+            padding: 3px 15px;
+            margin-right: 10px;
+            background-color: #120757;
+            border-radius: 100px;
+          }
+        }
+        p {
+          font-size: 0.6rem;
+          color: #333;
+        }
+      }
+      // 続きを読む
+      .ac_btn {
+        width: 100%;
+        padding: 5px 0;
+        margin: 0 auto;
+        font-size: 0.8rem;
+        letter-spacing: 0.2rem;
+        text-align: center;
+        background-color: #504f66;
+        cursor: pointer;
+      }
+      .ac_box {
+        display: none;
+        padding: 20px 10px;
+        font-size: 0.7rem;
+        line-height: 1rem;
+        color: $G;
+      }
+    }
+  }
+  // タブ
+  #tab_menu {
+    width: 90%;
+    max-width: 700px;
+    margin: 50px auto;
+    background-color: $P;
+    .tab_area {
+      display: flex;
+      border-collapse: collapse;
+      border-right: 2px solid white;
+      .tab {
+        width: calc(100% / 12);
+        padding: 5px;
+        text-align: center;
+        border: 2px solid white;
+        border-right: none;
+        i {
+          width: 20px;
+        }
+      }
+      .tab.active {
+        display: block;
+        color: $G;
+        background-color: $Y;
+        border-bottom: none;
+      }
+    }
+    .panel_area {
+      .panel {
+        display: none;
+      }
+      .panel.active {
+        display: block;
+        background-color: $P;
+        border: 2px solid;
+        border-top: none;
+      }
+    }
+  }
+}
+// access
+#ACCESS {
+  .container {
+    position: relative;
+    padding: 150px 0 50px;
+    margin: 250px auto 50px;
+    width: 100%;
+    background-color: $P;
+    .menu_logo {
+      position: absolute;
+      top: -100px;
+      width: 100%;
+      text-align: center;
+      img {
+        width: 200px;
+        height: 200px;
+      }
+    }
+    .access_box {
+      display: flex;
+      justify-content: space-evenly;
+      flex-wrap: wrap;
+      width: 100%;
+      padding: 30px 0;
+      margin-bottom: 50px;
+      background-color: $G;
+      h3 {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        .access_logo {
+          img {
+            width: 50px;
+            margin-right: 10px;
+          }
+        }
+        .en,
+        .jp {
+          width: fit-content;
+          padding-right: 10px;
+          font-size: 1.5rem;
+        }
+      }
+      .access_text {
+        width: 100%;
+        margin: 20px;
+        font-size: 0.8rem;
+        line-height: 1.5rem;
+      }
+    }
+    .access_icon {
+      display: flex;
+      text-align: center;
+      img {
+        width: 30px;
+        height: 30px;
+        margin: 10px;
+      }
+      p {
+        font-size: 0.4rem;
+      }
+    }
+    .access_img img {
+      width: 250px;
+      margin: 20px;
+      box-shadow: 10px 10px $Pa;
+    }
+  }
+  .map {
+    width: 100%;
+    h4 {
+      font-size: 2rem;
+      text-align: center;
+      letter-spacing: 0.2rem;
+    }
+  }
+}
+// アコーディオンメニュー(ACCESS)
+#ACCESS_AC {
+.accordion_area {
+  width: 100%;
+  margin: 0 auto;
+  .access_logo img {
+    width: 60px;
+  }
+  h3 {
+    display: flex;
+    align-items: center;
+    p {
+      display: inline-block;
+      font-size: 1.2rem;
+    }
+  }
+  li {
+    margin: 50px 0;
+    color: white;
+    background-color: #504f66;
+    border-radius: 20px;
+    border: 5px solid #f0dd33;
+  }
+}
+  /*アコーディオンタイトル*/
+  .title {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    position: relative;
+    font-size: 1rem;
+    transition: all 0.5s ease;
+    cursor: pointer;
+    img {
+      width: 50px;
+      margin: 10px 10px;
+    }
+    .en,
+    .jp {
+      margin-right: 10px;
+      width: fit-content;
+    }
+  }
+  /*アイコンの＋と×*/
+  .title::before,
+  .title::after {
+    position: absolute;
+    content: "";
+    width: 30px;
+    height: 2px;
+    background-color: #f0dd33;
+  }
+  .title::before {
+    top: 48%;
+    left: 15px;
+    transform: rotate(0deg);
+  }
+  .title::after {
+    top: 48%;
+    left: 15px;
+    transform: rotate(90deg);
+  }
+  .title.close::before {
+    transform: rotate(45deg);
+  }
+  .title.close::after {
+    transform: rotate(-45deg);
+  }
+  /*アコーディオンで現れるエリア*/
+  .box {
+    display: none;
+    background: #504f66;
+    margin: 0 3% 3% 3%;
+    padding: 5%;
+    border: 1px solid #ccc;
+  
+  .flex {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+  .access_text {
+    p {
+      margin: 0 50px 5px;
+      font-size: 0.8rem;
+    }
+  }
+  .access_icon {
+    margin: 20px auto;
+    width: 100%;
+    display: flex;
+    text-align: center;
+    img {
+      margin: 5px 12px;
+      width: 30px;
+    }
+    p {
+      font-size: 0.6em;
+      line-height: 1.4em;
+      color: white;
+    }
+  }
+  .access_img img {
+    width: 200px;
+    box-shadow: 15px 15px #080739;
+  }
+}
+}
+// footer
+footer {
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+  height: 300px;
+  padding: 20px 10px;
+  margin-top: 20px;
+  background-color: $Pa;
+  .flex {
+    display: flex;
+    justify-content: space-between;
+  }
+  ul {
+    font-size: 0.8rem;
+    li {
+      padding: 5px;
+    }
+  }
+  .footer_center {
+    h4 {
+      padding: 5px;
+    }
+    .tel {
+      li {
+        display: flex;
+        padding: 5px;
+      }
+      i {
+        font-size: 1rem;
+        margin-left: 5px;
+      }
+    }
+  }
+  .footer_right {
+    .voice {
+      display: block;
+      width: 100px;
+      padding: 3px 5px;
+      margin: auto auto;
+      color: $P;
+      font-weight: bold;
+      text-align: center;
+      background-color: $Y;
+    }
+  }
+  .sns {
+    display: flex;
+    justify-content: center;
+    i {
+      font-size: 2rem;
+      margin: 5px;
+    }
+  }
+  .copy {
+    text-align: center;
+  }
+  .footer_bg {
+    width: 100%;
+    .en {
+      position: absolute;
+      bottom: -35%;
+      text-align: right;
+      font-size: 10rem;
+      opacity: 0.5;
+      z-index: -1;
+    }
+    img {
+      position: absolute;
+      bottom: -50%;
+      left: 0;
+      width: 500px;
+      opacity: 0.5;
+      z-index: -1;
+    }
+  }
+}
+// レスポンシブ
+// 800以上
+@media screen and (min-width: 900px) {
+  // header
+  header {
+    height: 90px;
+    .openbtn {
+      display: none;
+    }
+    .logo {
+      img {
+        width: 60px;
+        height: 60px;
+      }
+      p {
+        font-size: 1.8rem;
+      }
+    }
+    .g-nav {
+      display: block;
+      ul {
+        display: flex;
+        .en {
+          font-size: 1rem;
+        }
+        .nav_sub {
+          font-size: 0.4rem;
+        }
+      }
+    }
+  }
+  main {
+    margin-top: 90px;
+    .top {
+      width: 90%;
+      margin: 0 auto;
+      .logo_flex {
+        height: 1rem;
+        img {
+          width: 100px;
+          height: 100px;
+          margin-right: 0.2rem;
+        }
+        p {
+          font-size: 5rem;
+        }
+      }
+      .logo {
+        width: 100%;
+        .logo_sub {
+          margin-left: 7rem;
+          font-size: 2rem;
+        }
+      }
+    }
+  }
+  // about
+  #ABOUT {
+    .about_box {
+      .flex {
+        // width: 90%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0 20px;
+      }
+      h3 {
+        font-size: 3rem;
+      }
+      .left {
+        width: 50%;
+      }
+      .about_item {
+        width: 50%;
+      }
+      .about_sub_box {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        .about_sub_left {
+          margin-right: 50px;
+        }
+      }
+    }
+  }
+  // menu
+  #MENU {
+    .gallery-list {
+      display: flex;
+      justify-content: space-evenly;
+      width: 100%;
+      li {
+        // width: 100%;
+        text-align: center;
+        img {
+          width: 90%;
+        }
+      }
+    }
+  }
+  // access
+  #ACCESS {
+    h3 {
+      font-size: 1.5rem;
+    }
+    .access_text p {
+      font-size: 1rem;
+      line-height: 1.8rem;
+    }
+  }
+  // アコーディオン
+  .accordion_area {
+    width: 90%;
+    .title {
+      font-size: 1.5rem;
+    }
+  }
+  // footer
+  footer {
+    height: 250px;
+    position: relative;
+    .flex {
+      display: block;
+    }
+    .footer_left {
+      width: fit-content;
+      margin: 0 auto;
+      ul {
+        display: flex;
+      }
+    }
+    .footer_center {
+      width: fit-content;
+      margin: 20px auto;
+      h4 {
+        text-align: center;
+      }
+      ul {
+        display: flex;
+      }
+    }
+    .footer_right {
+      position: absolute;
+      top: 20px;
+      right: 2%;
+      display: inline-block;
+    }
+  }
+}
+// 1000以内
+@media screen and (max-width: 1050px) {
+  .g-nav {
+    .nav_moon {
+      display: none;
+    }
+    .nav_sub {
+      font-size: 0.6rem;
+      &::before {
+        content: "● ";
+        color: $Y;
+      }
+    }
+  }
+  .logo {
+    position: absolute;
+    top: 0;
+    left: 5%;
+    z-index: 3;
+    .logo_sub {
+      margin-left: 20%;
+      font-size: 1rem;
+    }
+  }
+}
