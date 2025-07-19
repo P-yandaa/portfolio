@@ -5,6 +5,7 @@
   text-decoration: none;
   list-style: none;
   vertical-align: bottom;
+  font-size: 16px;
 }
 
 body {
@@ -72,11 +73,11 @@ header nav .logo:hover {
 header nav .nav li {
   display: inline-block;
   margin: 0 20px;
-  font-size: 2rem;
   border-radius: 10px;
   box-shadow: 10px 10px 0 0 #e62256, 18px 18px 0 4px black;
 }
 header nav .nav li a {
+  font-size: 1.8rem;
   display: block;
   padding: 0 20px;
   color: white;
@@ -267,7 +268,7 @@ main #ABOUT .about_right .about_right_container {
   border-radius: 100px 0 0 0px;
 }
 main #ABOUT .about_right .about_right_container .about_item {
-  max-width: 800px;
+  max-width: 1000px;
   min-width: 400px;
   margin-left: auto;
   padding: 0 20px;
