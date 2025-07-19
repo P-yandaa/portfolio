@@ -21,6 +21,7 @@
 html {
   overflow: auto;
   scroll-behavior: smooth;
+  font-size: 16px;
   /* 星空の背景 */
 }
 html body {
@@ -277,10 +278,10 @@ header ul li p {
   line-height: 1.3rem;
 }
 header ul li .en {
-  font-size: 1.3rem;
+  font-size: 1.5rem;
 }
 header ul li .nav_sub {
-  font-size: 0.6rem;
+  font-size: 2rem;
 }
 header ul li .nav_sub::before {
   content: "⇒";
@@ -369,7 +370,7 @@ header .openbtn span:nth-of-type(3)::after {
   top: 2px;
   left: -5px;
   color: #f0dd33;
-  font-size: 0.4rem;
+  font-size: 0.6rem;
   text-transform: uppercase;
 }
 header .openbtn.active span:nth-of-type(1) {
@@ -409,12 +410,13 @@ main .top .logo {
 }
 main .top .logo .logo_sub {
   margin-left: 3.5rem;
+  margin-bottom: 1rem;
   font-size: 1rem;
 }
 main .top .logo_flex {
   display: flex;
   align-items: center;
-  height: 1rem;
+  height: 1.5rem;
 }
 main .top .logo_flex img {
   width: 50px;
@@ -1117,7 +1119,7 @@ footer .footer_bg img {
   z-index: -1;
 }
 
-@media screen and (min-width: 900px) {
+@media screen and (min-width: 980px) {
   header {
     height: 90px;
   }
@@ -1138,10 +1140,10 @@ footer .footer_bg img {
     display: flex;
   }
   header .g-nav ul .en {
-    font-size: 1rem;
+    font-size: 1.3rem;
   }
   header .g-nav ul .nav_sub {
-    font-size: 0.4rem;
+    font-size: 0.8rem;
   }
   main {
     margin-top: 90px;
@@ -1248,7 +1250,7 @@ footer .footer_bg img {
     display: inline-block;
   }
 }
-@media screen and (max-width: 1050px) {
+@media screen and (max-width: 1200px) {
   .g-nav .nav_moon {
     display: none;
   }
